@@ -40,3 +40,38 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+//Nav links
+const links = document.querySelectorAll("nav a")
+console.log(links);
+
+const navLinks = Array.from(links);
+console.log(navLinks)
+
+navLinks[0].textContent = siteContent['nav']['nav-item-1'] // Services
+navLinks[1].textContent = siteContent['nav']['nav-item-2'] // Product
+navLinks[2].textContent = siteContent['nav']['nav-item-3'] // Vision
+navLinks[3].textContent = siteContent['nav']['nav-item-4'] // Features
+navLinks[4].textContent = siteContent['nav']['nav-item-5'] // About
+navLinks[5].textContent = siteContent['nav']['nav-item-6'] // Contact
+
+links.forEach(n => n.className = 'italic');
+
+
+// Other txt
+
+const domIsAwesome = document.querySelector('h1')
+domIsAwesome.textContent = siteContent['cta']['h1']
+
+
+
+const footerNav = document.querySelector('footer a')
+footerNav.className = 'bold';
+
+
+//header image 
+const header = document.querySelector('header')
+const logoNav = header.querySelector('img')
+logoNav.src = "http://localhost:9000/img/logo.png"
+
+
