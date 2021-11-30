@@ -33,9 +33,9 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "copyright": "Copyright Great Idea! 2021",
   },
   "images": {
-    "logo-img": "http://localhost:9000/img/logo.png",
-    "cta-img": "http://localhost:9000/img/cta.png",
-    "accent-img": "http://localhost:9000/img/accent.png",
+    "logo-img": "mocks/img/logo.png",
+    "cta-img": "mocks/img/cta.png",
+    "accent-img": "mocks/img/accent.png",
   },
 };
 
@@ -58,20 +58,85 @@ navLinks[5].textContent = siteContent['nav']['nav-item-6'] // Contact
 links.forEach(n => n.className = 'italic');
 
 
-// Other txt
+// main content
+//header image
+const header = document.querySelector('header')
+const logoNav = header.querySelector('img');
+logoNav.src = "mocks/img/logo.png";
 
 const domIsAwesome = document.querySelector('h1')
 domIsAwesome.textContent = siteContent['cta']['h1']
 
+//dom image
+const domImagePlace = document.querySelector('.cta')
+const domImage = domImagePlace.querySelector('img')
+domImage.src = "mocks/img/cta.png";
+
+//last image
+const lastImagePlace = document.querySelector('.main-content')
+const lastImage = lastImagePlace.querySelector('img')
+lastImage.src = "mocks/img/accent.png";
+
+const buttonText = document.querySelector('button')
+buttonText.textContent = siteContent['cta']['button']
 
 
-const footerNav = document.querySelector('footer a')
+
+//titles array
+const contentTitles = document.querySelectorAll('h4')
+console.log(contentTitles)
+
+const mainContentTitles = Array.from(contentTitles);
+console.log(mainContentTitles)
+
+//titles
+
+mainContentTitles[0].textContent = siteContent['main-content']['features-h4']
+mainContentTitles[1].textContent = siteContent['main-content']['about-h4'] 
+mainContentTitles[2].textContent = siteContent['main-content']['services-h4'] 
+mainContentTitles[3].textContent = siteContent['main-content']['product-h4'] 
+mainContentTitles[4].textContent = siteContent['main-content']['vision-h4'] 
+ 
+//text array
+const contentText = document.querySelectorAll('.text-content p')
+console.log(contentText)
+
+const mainContentText = Array.from(contentText);
+console.log(mainContentText)
+
+//contents under each title
+
+mainContentText[0].textContent = siteContent['main-content']['features-content']
+mainContentText[1].textContent = siteContent['main-content']['about-content'] 
+mainContentText[2].textContent = siteContent['main-content']['services-content'] 
+mainContentText[3].textContent = siteContent['main-content']['product-content'] 
+mainContentText[4].textContent = siteContent['main-content']['vision-content'] 
+
+
+//contact title
+const contactTitle = document.querySelectorAll('.contact h4')
+console.log(contactTitle)
+
+const contactTitleArray = Array.from(contactTitle);
+contactTitle[0].textContent = siteContent['contact']['contact-h4'];
+
+//contact details
+const contactDetails = document.querySelectorAll('.contact p')
+
+
+const contactDetailsArray = Array.from(contactDetails);
+contactDetailsArray[0].textContent = siteContent['contact']['address'];
+contactDetailsArray[1].textContent = siteContent['contact']['phone'];
+contactDetailsArray[2].textContent = siteContent['contact']['email'];
+
+
+const footerNav = document.querySelector('footer a');
+footerNav.textContent = siteContent['footer']['copyright']
+
 footerNav.className = 'bold';
 
 
-//header image 
-const header = document.querySelector('header')
-const logoNav = header.querySelector('img')
-logoNav.src = "http://localhost:9000/img/logo.png"
+
+
 
 
